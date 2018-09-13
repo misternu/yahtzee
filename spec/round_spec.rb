@@ -31,5 +31,11 @@ describe Round do
       end
       round.roll([0])
     end
+    it 'increments rolls variable' do
+      @dice.each do |die|
+        allow(die).to receive(:roll)
+      end
+      expect { round.roll }.to change { round.rolls }.from(0).to(1)
+    end
   end
 end
