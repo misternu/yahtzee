@@ -6,6 +6,6 @@ class Die
   end
 
   def roll
-    @value = rand(6) + 1
+    @value = (1..6).to_a.sample
   end
 end
